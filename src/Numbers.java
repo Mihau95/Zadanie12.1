@@ -11,8 +11,7 @@ public class Numbers {
 
         int sum = 0;
         int x=0;
-        double average = 0;
-        int biggerNumbers = 0;
+        double average = sum/numbers.size();
         while (scanner.hasNextInt()){
             if(x<0){
                 System.out.println("NIe można użyć liczby niższej niż 0");
@@ -23,14 +22,11 @@ public class Numbers {
                 numbers.add(element);
                 x++;
             }
-            sum = sum + Integer.valueOf(scanner.nextInt());
-            average = sum/50;
-            biggerNumbers = (!file.equals(average));
         }
 
+        sum = Integer.valueOf(scanner.next());
         System.out.println("Najniższa wartość: " + numbers.first());
         System.out.println("Najwyższa wartość: " + numbers.last());
-        System.out.println("Suma: " + sum);
         System.out.println("Srednia: " + average);
     }
 }
